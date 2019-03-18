@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -19,9 +20,9 @@ public class StudentController {
     BaserelationDao baserelationDao;
 
     @RequestMapping("/listStudent")
-    public String listStudent(Model model) {
+    public String listStudent(HttpServletRequest request) {
         List<Baserelation> studentList = baserelationDao.searchAll();
-        model.addAttribute("studentList", studentList);
+        request.setAttribute("studentList", studentList);
         return "student";
     }
 }

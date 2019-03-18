@@ -8,6 +8,6 @@
     </resultMap>
     <!-- 根据条件查询，全部 -->
     <select id="searchAll" resultMap="BaseResultMap">
-    select * from baserelation limit 2000
+    select * from baserelation limit 20000
   </select>
 </mapper>

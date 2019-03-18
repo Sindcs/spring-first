@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div>
-   <c:forEach items="studentList" var="item">
-       <span>${item.fund}</span>
+   <c:forEach items="${studentList}" var="item">
+       <p>${item.fund}</p>
    </c:forEach>
 </div>
