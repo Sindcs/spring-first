@@ -1,0 +1,18 @@
+server:
+  port: 8088
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    name: fundrelation
+    url: jdbc:mysql://192.168.106.42:3306/fundrelation
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp2:
+      max-open-prepared-statements: 20
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.cnki.model
